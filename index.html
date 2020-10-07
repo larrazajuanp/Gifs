@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" id='lightTheme' class="lightTheme dark">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>GifOs</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="/img/logo-desktop.svg" alt="Logo"></a>
+            </div>
+            <div class="menu-hamburguesa">
+                <img src="/img/burger.svg" alt="" class="img-burger display">
+                <img src="/img/button-close.svg" alt="" class="close-btn display" style="display: none;">
+            </div>
+            <ul id="list" class="list">
+                <li><a href="#" id="darkMode"> MODO NOCTURNO</a></li>
+                <li><a href="/Favoritos/"> FAVORITOS </a></li>
+                <li><a href="/MisGifos/"> MIS GIFOS </a></li>
+                <li id="btn-crear"><button><a href=""><img src="/img/button-crear-gifo.svg"
+                                alt="Boton crear gifos"></a></button></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Búsqueda Gif -->
+    <section class="search">
+        <div class="search-gif flex">
+            <h3>Inspírate, busca, guarda, y crea <br> los mejores <span> GIFOS</span></h3>
+            <img src="/img/ilustra_header.svg" alt="ilustración">
+            <div class="input-search">
+                <input type="text" placeholder="Busca GIFOS y más" id="searchGifos">
+                <img src="/img/icon-search.svg" alt="search icon" id="lupa">
+                <img src="/img/icon-search.svg" alt="search icon" id="lupaActive">
+                <img src="/img/button-close.svg" alt="search icon" id="close">
+                <div id="suggestion-container"></div>
+            </div>
+
+        </div>
+        <!-- Resultados Búsqueda -->
+        <div class="trending-result flex">
+            <h4>Trending:</h4>
+            <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+        </div>
+        <span class="textoBusqueda flex"></span>
+        <!-- Gif con API -->
+        <div class="contenedor-gifs" id="contenedor-gifs">
+        </div>
+        <!-- Boton - Ver Más -->
+        <div class="button-gif">
+            <button class="button">Ver Más</button>
+        </div>
+    </section>
+    <!-- Seccion Trending Gif -->
+    <section class="trending">
+        <div class="trending-title flex">
+            <h3>Trending GIFOS</h3>
+            <p>Mira los últimos GIFO de nuestra comunidad.</p>
+        </div>
+        <div class="slider-left" id="slider-left">
+            <img src="/img/button-left.svg" alt="">
+        </div>
+        <div class="contenedor-trending"></div>
+        <div class="slider-right" id="slider-right">
+            <img src="/img/button-right.svg" alt="">
+        </div>
+    </section>
+    <!-- Seccion Footer -->
+    <footer>
+        <ul>
+            <li>
+                <h5>Compatir en:</h5>
+            </li>
+            <li><a href=""><img src="/img/icon_instagram.svg" alt="" id="instagram"></a></li>
+            <li><a href=""><img src="/img/icon-twitter.svg" alt="" id="twitter"></a></li>
+            <li><a href=""><img src="/img/icon_facebook.svg" alt="" id="facebook"></a></li>
+        </ul>
+        <h4>© GIFOS 2020 All Rights Reserved.</h4>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="/js/app.js"></script>
+    <script src="/js/darkMode.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/hamburgerMenu.js"></script>
+
+</body>
+<div class="modal-gif"></div>
+
+</html>
