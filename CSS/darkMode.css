@@ -296,6 +296,8 @@ footer ul li{
 
 /* Mobile */
 
+/* Mobile */
+
 @media screen and (max-width: 425px){
     nav{
         position: relative;
@@ -308,9 +310,10 @@ footer ul li{
     .list{
         margin-top: 6rem;
         position: fixed;
-        background:rgb(103,66,232);
+        left: 0;
+        background:var(--black);
         height: 90vh;
-        width: 100%;
+        width: 50%;
         flex-direction: column;
         justify-content: space-around;
         z-index: 1;
@@ -359,6 +362,9 @@ footer ul li{
     }
     .contenedor-trending{
         display: flex;
+    }
+    .slider-left, .slider-right{
+        display: none;
     }
    footer ul{
        width: 80%;

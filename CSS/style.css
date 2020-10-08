@@ -551,7 +551,7 @@ footer ul li{
         left: 0;
         background:rgb(103,66,232);
         height: 90vh;
-        width: 50%;
+        width: 100%;
         flex-direction: column;
         justify-content: space-around;
         z-index: 1;

@@ -1,5 +1,10 @@
 // Variables
 
+// Api key
+const apiKey = 'H3aHz0JfkpHAYratenErxZDfQObTUM9H';
+//Api Url
+const apiURL = "https://api.giphy.com/v1/gifs/";
+
 //lupa
 const lupa = document.getElementById('lupa');
 // Input busqueda
@@ -8,12 +13,7 @@ const searchGifos = document.getElementById('searchGifos');
 const containerSuggestions = document.getElementById('suggestion-container');
 // Contenedor Gifs
 const contenedorGifs = document.querySelector('.contenedor-gifs');
-// Api key
-const apiKey = 'H3aHz0JfkpHAYratenErxZDfQObTUM9H';
-//Api Url
-const apiURL = "https://api.giphy.com/v1/gifs/";
-//Numero de gif
-let numberGifSearch;
+
 //Inicializamos numero
 let numero = 0;
 
@@ -72,6 +72,7 @@ const gifSearch = async (search) => {
     let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${search}`
 
     const searchGifObject = await getGif(url);
+    localStorage.setItem('search', JSON.stringify(searchGifObject));
     const gifAmount = searchGifObject.data.length;
 
     let searchList = document.querySelector('.contenedor-gifs');
@@ -104,6 +105,7 @@ const trendingGif = async numero => {
     let url = `${apiURL}trending?api_key=${apiKey}`;
 
     const trending = await getGif(url);
+    localStorage.setItem('trending', JSON.stringify(trending));
     document.querySelector(".contenedor-trending").innerHTML = '';
     newGifAmount = numero + 4;
     const amountGif = trending.data.length;
@@ -185,7 +187,9 @@ function maxGif(gif) {
     document.querySelector('section').style.display = 'none';
     document.querySelector('.trending').style.display = 'none';
     document.querySelector('footer').style.display = 'none';
-    const template = document.createElement('div');
+
+
+    /*const template = document.createElement('div');
     template.innerHTML = `
     <body>
     <header style="background: white;">
@@ -198,7 +202,8 @@ function maxGif(gif) {
     
     `
     document.querySelector('.modal-gif').appendChild(template)
-    console.log(template)
+    console.log(template)*/
+    //localStorage.getItem(JSON.parse(trending));
 }
 
 
