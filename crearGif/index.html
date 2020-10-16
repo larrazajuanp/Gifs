@@ -24,35 +24,54 @@
                 <li><a href="#" id="darkMode"> MODO NOCTURNO</a></li>
                 <li><a href="/Favoritos/"> FAVORITOS </a></li>
                 <li><a href="/MisGifos/"> MIS GIFOS </a></li>
-                <li id="btn-crear"><button><a href="/Favoritos/"><img src="/img/button-crear-gifo.svg"
+                <li id="btn-crear"><button><a href="/crearGif/"><img src="/img/button-crear-gifo.svg"
                                 alt="Boton crear gifos"></a></button></li>
             </ul>
         </nav>
     </header>
-    <section class="container">
+    <section class="container-create">
 
         <div class="create" id="create">
 
-            <div class="camara" id="camara"></div>
-            <div class="light-camara" id="light-camara"></div>
+            <div class="camara" id="camara">
+                <img src="/img/camara.svg" alt="">
+            </div>
+            <div class="light-camara" id="light-camara">
+                <img src="/img/element-luz-camara.svg" alt="">
+            </div>
             <div class="video-container" id="video-container">
 
-                <div class="prev-overlay" id="prev-overlay">Estamos subiendo tu GIFO</div>
+                <div class="prev-overlay" id="prev-overlay" style="display: none;">Estamos subiendo tu GIFO</div>
                 <div class="download-video"></div>
                 <div class="link"></div>
                 <video class="video"></video>
-                <img src="#" class="prev hide" id="prev" alt="previsualizar" />
+                <img src="#" class="prev hide" id="prev" alt="previsualizar" style="display: none;" />
                 <div class="create-text">
-
-                    <h1 class="h1">Aquí podrás crear tus propios <span class="green-text"> GIFOS</span> </h1>
-                    <h3 class="h3">¡Crea tu GIFO en sólo 3 pasos! <br>(sólo necesitas una cámara para grabar un video)
+                    <h1>Aquí podrás <br> crear tus propios <span class="green-text"> GIFOS</span> </h1>
+                    <h3>¡Crea tu GIFO en sólo 3 pasos! <br>(sólo necesitas una cámara para grabar un video)
                     </h3>
-
                 </div>
-
-
             </div>
-            <div class="pelicula" id="pelicula"></div>
+            <div class="movie-icon" id="movie-icon">
+                <img src="/img/pelicula.svg" alt="">
+            </div>
+            <div class="circles">
+                <ul>
+                    <li>
+                        <div class="one">1</div>
+                    </li>
+                    <li>
+                        <div class="two">2</div>
+                    </li>
+                    <li>
+                        <div class="three">3</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="clock"></div>
+            <div class="line-blue"></div>
+            <div class="btn-start"><button>COMENZAR</button></div>
+
     </section>
 
     <!-- Seccion Footer -->
@@ -69,6 +88,7 @@
     </footer>
     <!-- Scripts JavaScript -->
     <script src="/js/app.js"></script>
+    <script src="/js/createGif.js"></script>
     <script src="/js/darkMode.js"></script>
     <script src="/js/hamburgerMenu.js"></script>
 
