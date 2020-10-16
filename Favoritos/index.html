@@ -24,7 +24,7 @@
                 <li><a href="#" id="darkMode"> MODO NOCTURNO</a></li>
                 <li><a href="/Favoritos/"> FAVORITOS </a></li>
                 <li><a href="/MisGifos/"> MIS GIFOS </a></li>
-                <li id="btn-crear"><button><a href=""><img src="/img/button-crear-gifo.svg"
+                <li id="btn-crear"><button><a href="/crearGif/"><img src="/img/button-crear-gifo.svg"
                                 alt="Boton crear gifos"></a></button></li>
             </ul>
         </nav>
@@ -63,12 +63,13 @@
             <img src="/img/icon-favoritos.svg" alt="icono favoritos">
             <h2>Favoritos</h2>
         </div>
-        <div class="save-fauvorite flex">
+        <div class="save-favourite flex">
             <div class="circle"></div>
             <img src="/img/icon-favoritos.svg" alt="icono favoritos">
             <h4>"¡Guarda tu primer GIFO en Favoritos <br>
                 para que se muestre aquí!"</h4>
         </div>
+        <div class="my-favourites"></div>
     </section>
     <!-- Seccion Trending Gif -->
     <section class="trending">
@@ -97,6 +98,19 @@
         <h4>© GIFOS 2020 All Rights Reserved.</h4>
     </footer>
 
+    <div class="modal-gif flex" style="display: none;">
+        <div class="close-modal"></div>
+        <div class="slider-left-modal"></div>
+        <div class="contenedor-modal"></div>
+        <div class="slider-right-modal"></div>
+
+        <div class="user-modal"></div>
+        <div class="title-modal"></div>
+        <div class="heart-modal"></div>
+        <div class="download-modal"></div>
+
+    </div>
+
     <!-- Scripts JavaScript -->
     <script src="/js/app.js"></script>
     <script src="/js/darkMode.js"></script>
@@ -105,6 +119,5 @@
     <script src="/js/hamburgerMenu.js"></script>
 
 </body>
-<div class="modal-gif"></div>
 
 </html>
