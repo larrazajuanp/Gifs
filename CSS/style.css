@@ -161,7 +161,8 @@ ul li a:hover{
     margin-top: 6.7rem;
 }
 .trending-title p{
-    font-family: Roboto-Regular;
+    font-family: 'Roboto';
+    font-weight: 400;
     font-size: 1.8rem;
     color: #000000;
     text-align: center;
@@ -559,6 +560,7 @@ footer ul li{
 .img-results, .img-search-result{
     position: relative;
     margin: 0 2rem;
+    width: 90%;
 }
 .img-results img{
     width: 357px;
@@ -824,6 +826,33 @@ footer ul li{
         margin: 0 3rem;
         font-size: 13px;
     }
+    .button-gif .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem auto 4rem auto;
+    }
+    .slider-left, .slider-right{
+        display: none;
+    }
+    .img-results .user{
+        top: 200px;
+    }
+    .img-results .title{
+        top: 230PX;
+    }
+    .img-results .heart{
+        left: 23rem;
+    }
+    .img-results .download{
+        left: 27rem;
+    }
+    .img-results .max{
+        left: 31rem;
+    }
+    .save-favourite h4{
+        max-width: 400px;
+    }
 }
 
 @media screen and (max-width: 425px){
@@ -891,6 +920,30 @@ footer ul li{
     .contenedor-trending{
         display: flex;
     }
+    .img-search-result img {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .user{
+        top: 110px;
+        font-size: 14px;
+    }
+    .title{
+        top: 150px;
+        font-size: 14px;
+    }
+    .max{
+        left: 29rem;
+    }
+    .heart{
+        left: 21rem;
+    }
+    .download{
+        left: 25rem;
+    }
+    .heart img, .download img, .max img{
+        margin-top: 0.8rem;
+    }    
     .slider-left, .slider-right{
         display: none;
     }
@@ -898,4 +951,71 @@ footer ul li{
        width: 80%;
        margin: 0 auto;
    }
+}
+
+@media screen and (max-width: 375px){
+    .user{
+        top: 110px;
+        font-size: 14px;
+    }
+    .title{
+        top: 150px;
+        font-size: 14px;
+    }
+    .max{
+        left: 25rem;
+    }
+    .heart{
+        left: 17rem;
+    }
+    .download{
+        left: 21rem;
+    }
+    .heart img, .download img, .max img{
+        margin-top: 0.8rem;
+    } 
+}
+
+@media screen and (max-width: 320px){
+    .user{
+        top: 110px;
+        font-size: 14px;
+    }
+    .title{
+        top: 150px;
+        font-size: 14px;
+    }
+    .max{
+        left: 21rem;
+    }
+    .heart{
+        left: 13rem;
+    }
+    .download{
+        left: 17rem;
+    }
+    .heart img, .download img, .max img{
+        margin-top: 0.8rem;
+    } 
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px){
+    .img-search-result .user{
+        top: 120px;
+        font-size: 14px;
+    }
+    .img-search-result .title{
+        top: 160px;
+        font-size: 14px;
+    }
+    .img-search-result .max{
+        left: 22rem;
+    }
+    .img-search-result .heart{
+        left: 14rem;
+    }
+    .img-search-result .download{
+        left: 18rem;
+    }
 }
