@@ -1,9 +1,10 @@
 //Eventos para buscar gif
-if (document.getElementById('searchGifos')) {
+const inputSearch = document.getElementById('searchGifos');
+if (inputSearch) {
 
-    document.getElementById('searchGifos').addEventListener('input', updateSuggestions);
+    inputSearch.addEventListener('input', updateSuggestions);
 
-    document.getElementById('searchGifos').addEventListener('keypress', searchGif);
+    inputSearch.addEventListener('keypress', searchGif);
 
 }
 
