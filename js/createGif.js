@@ -3,7 +3,9 @@ const h1 = document.querySelector('h1');
 const h3 = document.querySelector('h3');
 const video = document.querySelector('.video');
 const clock = document.querySelector('.clock');
-const btnStart = document.querySelector('.btn-start');
+const btnStart = document.querySelector('.btn-start button');
+const btnRecordFinish = document.querySelector('button');
+//const btnFinish = document.querySelector('.btn-finish');
 const stepOne = document.querySelector('.one');
 const stepTwo = document.querySelector('.two');
 const stepThree = document.querySelector('.three');
@@ -34,7 +36,9 @@ function getStreamAndRecord() {
             h3.innerHTML = "";
             video.style.display = "block";
             btnStart.style.display = "block";
-            btnStart.innerHTML = "Grabar";
+            //btnRecord.style.display = 'block';
+            btnStart.textContent = "Grabar";
+            btnStart.classList.add('btn-record');
             video.srcObject = stream;
             video.play();
             record = 1;
@@ -192,10 +196,10 @@ function transcurrido() {
 
 function subirGif(gif) {
 
-    stepTwo.style.background = "var(--background)";
-    stepTwo.style.color = "var(--color-texto)";
-    stepThree.style.background = "var(--color-texto)";
-    stepThree.style.color = "var(--background)";
+    stepTwo.style.backgroundColor = "#572EE5";
+    stepTwo.style.color = "white";
+    stepThree.style.backgroundColor = "#572EE5";
+    stepThree.style.color = "white";
     btnStart.innerHTML = "Subiendo Gif";
 
 
@@ -233,14 +237,14 @@ async function guardarGif(id) {
 
     let url = 'https://api.giphy.com/v1/gifs/' + id + `?api_key=${apiKey}`;
 
-    let gifCreado = await traerGif(url);
+    let gifCreado = await getGif(url);
 
     arrayMisGifs = [];
 
 
-    if (localStorage.getItem("misGifosLocalStorage") !== null) {
+    if (localStorage.getItem("misGifos") !== null) {
 
-        arrayMisGifs = JSON.parse(localStorage.getItem("misGifosLocalStorage"));
+        arrayMisGifs = JSON.parse(localStorage.getItem("misGifos"));
 
     }
 
@@ -253,7 +257,7 @@ async function guardarGif(id) {
 
     arrayMisGifs.push(arrayGif);
 
-    localStorage.setItem("misGifosLocalStorage", JSON.stringify(arrayMisGifs));
+    localStorage.setItem("misGifos", JSON.stringify(arrayMisGifs));
 
     /* -------------------------
     AGREGO BOTONES DESCARGA Y URL
@@ -281,7 +285,7 @@ async function guardarGif(id) {
     ACCIONES EN BOTONES
 --------------------------*/
 
-//downloadVideo.addEventListener("click", downloadGif);
+downloadVideo.addEventListener("click", downloadGif);
 
 
 link.addEventListener('click', (e) => {
