@@ -64,6 +64,9 @@ ul li{
 ul li a{
     color: var(--main);
 }
+ul li a:hover{
+    color: #9CAFC3;
+}
 .menu-hamburguesa{
     display: none;
 }
@@ -147,6 +150,7 @@ ul li a{
     background: #F3F5F8;
     min-height: 50vh;
     position: relative;
+    overflow: hidden;
 }
 .trending-title h3{
     font-size: 2.5rem;
@@ -218,17 +222,17 @@ ul li a{
 }
 /* Trending Section */
 
-/* Fauvorites Section */
-.title-fauvorite{
+/* Favourites Section */
+.title-favourite{
     position: relative;
     margin-bottom: 11rem;
 }
-.title-fauvorite img{
+.title-favourite img{
     position: absolute;
     top: -5rem;
     color:#50E3C2;
 }
-.title-fauvorite h2{
+.title-favourite h2{
     position: absolute;
     top: -2rem;
     font-family: 'Montserrat';
@@ -238,20 +242,20 @@ ul li a{
     text-align: center;
     line-height: 30px;
 }
-.save-fauvorite .circle{
+.save-favourite .circle{
     background: #F3F5F8;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     position: relative;
 }
-.save-fauvorite img{
+.save-favourite img{
     position: absolute;
     top: 34rem;
     width: 76px;
     height: 54px;
 }
-.save-fauvorite h4{
+.save-favourite h4{
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 22px;
@@ -260,7 +264,13 @@ ul li a{
     line-height: 33px;
     margin: 2rem 0 13rem 0;
 }
-/* Fauvorites Section */
+.my-favourites{
+    min-height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Favourites Section */
 
 /* MyGifos Section */
 
@@ -283,6 +293,7 @@ ul li a{
     text-align: center;
     line-height: 30px;
 }
+
 .create-gif .circle{
     background: #F3F5F8;
     width: 150px;
@@ -296,6 +307,13 @@ ul li a{
     width: 76px;
     height: 54px;
 }
+.myGif-container{
+    position: relative;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .create-gif h4{
     font-family: 'Montserrat';
     font-weight: 700;
@@ -306,6 +324,209 @@ ul li a{
     margin: 2rem 0 13rem 0;
 }
 /* MyGifos Section */
+
+/* Crear Gif Section */
+.container-create{
+    margin-bottom: 1rem;
+}
+.create{
+    position: relative;
+}
+.camara{
+    margin-left: 2rem;
+}
+.light-camara{
+    position: absolute;
+    top: 1.8rem;
+    left: 14rem;
+}
+
+.create-text{
+    border: 1px solid #572EE5;
+    width: 688px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    top: -5rem;
+    right: 25%
+}
+.create-text h1{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 25px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 35px;
+    max-width: 550px;
+}
+.green-text{
+    color: #50E3C2;
+}
+.create-text h3{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    line-height: 29px;
+    margin-top: 0.5rem;
+}
+.movie-icon{
+    position: absolute;
+    right: 0;
+    margin-right: 14rem;
+    bottom: 11rem;
+}
+.clock{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+    position: absolute;
+    right: 35rem;
+    bottom: 13rem;
+    cursor: pointer;
+
+}
+.line-blue{
+    background: #572EE5;
+    width: 796px;
+    height: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 5rem auto;
+}
+.circles{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 2rem;
+}
+.circles ul{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem ;
+}
+.circles ul li{
+    margin: 20rem 3rem 2rem 3rem;
+}
+.one{
+    border: 1px solid #572EE5;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    color: #572EE5;
+    text-align: center;
+    position: absolute;
+    padding: 0.25rem 0;
+}
+.two{
+    border: 1px solid #572EE5;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    color: #572EE5;
+    text-align: center;
+    position: absolute;
+    padding: 0.25rem 0;
+}
+.three{
+    border: 1px solid #572EE5;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    color: #572EE5;
+    text-align: center;
+    position: absolute;
+    padding: 0.25rem 0;
+}
+.btn-start button{
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-record button{
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-finish button{
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.video{
+    position: absolute;
+    top: -2rem;
+    width: 550px;
+    height: 320px;
+    margin-left: 40rem;
+}
+#prev{
+    position: absolute;
+    top: -2rem;
+    width: 550px;
+    height: 320px;
+    margin-left: 40rem;
+}
+#prev-overlay{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffff;
+    text-align: center;
+    position: absolute;
+    top: -2rem;
+    margin-left: 40rem;
+    z-index: 1;
+    padding: 15rem 2rem;
+    background: #572EE5;
+    opacity: 0.6;
+    width: 550px;
+    height: 320px;
+}
+/* Crear Gif Section */
 
 /* Footer */
 
@@ -346,6 +567,7 @@ footer ul li{
 .img-search-result img{
     width: 260px;
     height: 200px;
+    position: relative;
 }
 #suggestion-container{
     padding-left:37px;
@@ -400,7 +622,7 @@ footer ul li{
     background: rgba(0, 0, 0, 0);
     transition: background 0.5s ease;
   }
-  .usuario {
+  .user {
     position: absolute;
     width: 50%;
     left: -4%;
@@ -416,7 +638,7 @@ footer ul li{
     margin-left: 3.2rem;
   }
   
-  .titulo {
+  .title {
     position: absolute;
     width: 70%;
     left: 2%;
@@ -450,6 +672,10 @@ footer ul li{
     height: 16px;
     position: absolute;
     margin: 1rem 0.75rem;
+  }
+  .actHeart{
+      background: url('/img/icon-fav-active.svg') no-repeat;
+      background-size: 100%;
   }
   
   .download {
@@ -492,16 +718,16 @@ footer ul li{
     position: absolute;
     margin: 1rem 0.75rem;
   }
-  .img-search-result:hover .titulo{
+  .img-search-result:hover .title{
       opacity: 1;
   }
-  .img-results:hover .titulo {
+  .img-results:hover .title {
     opacity:1;
   }
-  .img-search-result:hover .usuario{
+  .img-search-result:hover .user{
     opacity: 1;
 }
-  .img-results:hover .usuario {
+  .img-results:hover .user {
     opacity:1;
   }
   .img-search-result:hover .heart{
@@ -533,8 +759,72 @@ footer ul li{
     opacity: 0.8;
     background: #572EE5;
   }
+  .modal-gif{
+      min-height: 100vh;
+      position: relative;
+  }
+  .close-modal{
+      background: url('/img/button-close.svg') no-repeat;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: 20rem;
+      top: 5rem;
+      cursor: pointer;
+      background-size: 100%;
+      
+  }
+  .contenedor-modal{
+    margin-top: 0;
+    width: 695px;
+    height: 385px
+  }
+  .title-modal{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    position: absolute;
+    left: 33rem;
+    bottom: 7rem;
+  }
+  .user-modal{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+    position: absolute;
+    left: 33rem;
+    bottom: 9rem;
+  }
+  .heart-modal{
+      position: absolute;
+      right: 38rem;
+      bottom: 7.5rem;
+      background: url('/img/icon-fav-active.svg')no-repeat;
+      width: 20px;
+      height: 20px;
+  }
+  .download-modal{
+    position: absolute;
+    right: 34rem;
+    bottom: 7.5rem;
+    background: url('/img/icon-download.svg')no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
 
 /* Mobile */
+
+@media screen and (max-width: 768px){
+    ul li{
+        margin: 0 3rem;
+        font-size: 13px;
+    }
+}
 
 @media screen and (max-width: 425px){
     nav{
