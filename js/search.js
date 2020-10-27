@@ -15,6 +15,14 @@ function searchGif(e) {
         gifSearch(text)
         showSearch(text)
     }
+    const btnClose = document.getElementById('close');
+    btnClose.style.display = 'block';
+    btnClose.addEventListener('click', () => {
+        showSearch('')
+        inputSearch.value = '';
+    })
+    document.getElementById('lupa').style.display = 'none';
+    document.getElementById('lupaActive').style.display = 'block';
 }
 
 function showSearch(title) {
