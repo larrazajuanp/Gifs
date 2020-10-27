@@ -113,6 +113,7 @@ const getSuggestionsElems = suggestions => {
     let arraySuggetions = [];
     suggestions.data.forEach(sug => {
         const div = document.createElement('div');
+        div.style.cursor = 'pointer';
         div.innerHTML = `<li class="icono-busqueda">${sug.name}</li>`;
         div.addEventListener('click', (e) => {
             let input = document.getElementById("searchGifos");

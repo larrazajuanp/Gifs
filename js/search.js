@@ -17,6 +17,7 @@ function searchGif(e) {
     }
     const btnClose = document.getElementById('close');
     btnClose.style.display = 'block';
+    btnClose.style.cursor = 'pointer';
     btnClose.addEventListener('click', () => {
         showSearch('')
         inputSearch.value = '';
