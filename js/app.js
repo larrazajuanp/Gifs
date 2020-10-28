@@ -15,6 +15,8 @@ const containerSuggestions = document.getElementById('suggestion-container');
 const contenedorGifs = document.querySelector('.contenedor-gifs');
 //Contenedor trending
 const trendingContainer = document.querySelector(".contenedor-trending");
+const iconDownload = document.querySelector('.download-gif-created img');
+const iconLink = document.querySelector('.link-gif-created img');
 
 //Inicializamos numero
 let numero = 0;
