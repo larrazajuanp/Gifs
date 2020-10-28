@@ -13,6 +13,7 @@ const prevOverlay = document.querySelector('.prev-overlay');
 const downloadVideo = document.querySelector('.download-video');
 const link = document.querySelector('.link');
 
+
 let record = 0; //grabacion
 let recorder; // grabador
 let recording = false; //grabando
@@ -117,6 +118,7 @@ function detenerGrabacion() {
             prevOverlay.style.backgroundRepeat = "no-repeat";
             prevOverlay.style.backgroundSize = "22px";
             prevOverlay.style.backgroundPosition = "50% 40%";
+
 
         }
     })
@@ -264,17 +266,22 @@ async function guardarGif(id) {
     --------------------------*/
 
     const url_gif = gifCreado.data.images.original.url;
+    console.log(url_gif)
 
-    link.style.opacity = 1;
-    link.setAttribute("url_gif", url_gif);
+    //link.style.opacity = 1;
+    //link.setAttribute("url_gif", url_gif);
     downloadVideo.setAttribute("url_gif", url_gif);
-    downloadVideo.setAttribute("titulo_gif", "gif");
+    downloadVideo.setAttribute("title_gif", "gif");
     downloadVideo.style.opacity = 1;
-    downloadVideo.style.zIndex = 2;
-    downloadVideo.style.zIndex = 2;
+    //downloadVideo.style.zIndex = 2;
+    //downloadVideo.style.zIndex = 2;
     downloadVideo.style.top = "25%";
+    //downloadVideo.style.margin = '0 0 10rem 0'
     downloadVideo.style.zIndex = 2;
     downloadVideo.style.left = "60%";
+    iconDownload.style.opacity = 1;
+    iconLink.style.opacity = 1;
+
 
     console.log("Proceso Terminado");
 
@@ -284,13 +291,16 @@ async function guardarGif(id) {
 /* -------------------------
     ACCIONES EN BOTONES
 --------------------------*/
+iconDownload.addEventListener("click", (e) => {
+    const target = e.target.parentElement.parentElement.attributes[1].value;
+    console.log(target)
+    downloadGif(target)
+});
 
-downloadVideo.addEventListener("click", downloadGif);
 
+iconLink.addEventListener('click', (e) => {
 
-link.addEventListener('click', (e) => {
-
-    let url_gif = e.target.attributes.getNamedItem('url_gif').value;
+    let url_gif = e.target.parentElement;
     let aux = document.createElement("input");
     aux.value = url_gif;
     document.body.appendChild(aux);
