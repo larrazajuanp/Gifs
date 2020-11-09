@@ -285,6 +285,21 @@ async function guardarGif(id) {
 
     console.log("Proceso Terminado");
 
+    // Icon link
+    iconLink.addEventListener('click', (e) => {
+
+        let url_gif = gifCreado.data.images.original.url;
+        console.log(url_gif)
+        let aux = document.createElement("input");
+        aux.value = url_gif;
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+        alert("Link del Gif Copiado al Portapapeles");
+
+    });
+
 }
 
 
@@ -294,19 +309,20 @@ async function guardarGif(id) {
 iconDownload.addEventListener("click", (e) => {
     const target = e.target.parentElement.parentElement.attributes[1].value;
     console.log(target)
-    downloadGif(target)
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", target, true);
+    xhr.responseType = "blob";
+    xhr.onload = function () {
+        let urlCreator = window.URL || window.webkitURL;
+        let imageUrl = urlCreator.createObjectURL(this.response);
+        let tag = document.createElement('a');
+        tag.href = imageUrl;
+        //tag.download = nombre;
+        document.body.appendChild(tag);
+        tag.click();
+        document.body.removeChild(tag);
+    }
+    xhr.send();
 });
 
 
-iconLink.addEventListener('click', (e) => {
-
-    let url_gif = e.target.parentElement;
-    let aux = document.createElement("input");
-    aux.value = url_gif;
-    document.body.appendChild(aux);
-    aux.select();
-    document.execCommand("copy");
-    document.body.removeChild(aux);
-    alert("Link del Gif Copiado al Portapapeles");
-
-});
